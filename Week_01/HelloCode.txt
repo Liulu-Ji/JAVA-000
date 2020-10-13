@@ -1,0 +1,73 @@
+Compiled from "Hello.java"
+public class Hello {
+  public Hello();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public static void main(java.lang.String[]);
+    Code:
+       0: ldc           #2                  // String week
+       2: astore_1
+       3: bipush        100
+       5: istore_2
+       6: iconst_1
+       7: istore_3
+       8: iconst_1
+       9: istore        4
+      11: lconst_1
+      12: lstore        5
+      14: sipush        1000
+      17: istore        7
+      19: ldc2_w        #3                  // double 0.01d
+      22: dstore        8
+      24: iconst_1
+      25: istore        10
+      27: iconst_0
+      28: istore        11
+      30: iload         11
+      32: bipush        10
+      34: if_icmpge     120
+      37: iload_2
+      38: iload         11
+      40: iadd
+      41: istore_2
+      42: iload         11
+      44: iload_3
+      45: idiv
+      46: istore        4
+      48: iload         7
+      50: iload         11
+      52: isub
+      53: istore        7
+      55: lload         5
+      57: iload         11
+      59: i2l
+      60: lmul
+      61: lstore        5
+      63: dload         8
+      65: dload         8
+      67: dadd
+      68: dstore        8
+      70: iload         10
+      72: ifeq          114
+      75: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      78: iload_2
+      79: invokevirtual #6                  // Method java/io/PrintStream.println:(I)V
+      82: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      85: iload         4
+      87: invokevirtual #6                  // Method java/io/PrintStream.println:(I)V
+      90: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+      93: iload         7
+      95: invokevirtual #6                  // Method java/io/PrintStream.println:(I)V
+      98: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+     101: lload         5
+     103: invokevirtual #7                  // Method java/io/PrintStream.println:(J)V
+     106: getstatic     #5                  // Field java/lang/System.out:Ljava/io/PrintStream;
+     109: dload         8
+     111: invokevirtual #8                  // Method java/io/PrintStream.println:(D)V
+     114: iinc          11, 1
+     117: goto          30
+     120: return
+}
