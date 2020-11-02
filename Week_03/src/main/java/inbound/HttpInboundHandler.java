@@ -33,7 +33,7 @@ public class HttpInboundHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
         try {
             FullHttpRequest fullRequest = (FullHttpRequest) msg;
-            ReponseHeaderFilter.addHeaderToReq(fullRequest,ctx);
+            //ReponseHeaderFilter.addHeaderToReq(fullRequest,ctx);
             handler.handle(fullRequest, ctx);
         } catch(Exception e) {
             e.printStackTrace();

@@ -1,5 +1,6 @@
 package inbound;
 
+import filter.ReponseHeaderFilter;
 import io.netty.channel.ChannelInitializer;
 import io.netty.channel.ChannelPipeline;
 import io.netty.channel.socket.SocketChannel;
@@ -23,6 +24,7 @@ public class HttpInboundInitializer extends ChannelInitializer<SocketChannel> {
         p.addLast(new HttpServerCodec());
         //p.addLast(new HttpServerExpectContinueHandler());
         p.addLast(new HttpObjectAggregator(1024 * 1024));
+        p.addLast(new ReponseHeaderFilter());
         p.addLast(new HttpInboundHandler(this.proxyServer));
     }
 }
